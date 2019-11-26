@@ -30,6 +30,9 @@ function preload(){
   game.load.audio('launch', './assets/audio/Missile.mp3');
   game.load.audio('boom', ['./assets/audio/explosion.ogg', './assets/audio/explosion.mp3']);
   game.load.audio('nukeboom', ['./assets/audio/ExplosionNuke.mp3']);
+
+  //Load fonts
+  game.load.bitmapFont('carrier_command', './assets/fonts/carrier_command.png', './assets/fonts/carrier_command.xml');
 }
 
 function create(){
@@ -75,9 +78,6 @@ function create(){
 
   // Set initial game state
   initializeGame();
-
-  // Create enemies in a loop
-  // game.time.events.loop(Phaser.Timer.SECOND * 2, spawnEnemy);
 }
 
 function update(){

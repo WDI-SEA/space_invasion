@@ -16,6 +16,9 @@ function initializeGame(){
   game.input.keyboard.addKeyCapture([Phaser.Keyboard.SPACEBAR, Phaser.Keyboard.ENTER]);
 
   // Add Score and HP Text to the screen
-  hpText = game.add.text(GAME_WIDTH - 150, 20, 'Life: 0', {fill: '#fff'});
-  scoreText = game.add.text(GAME_WIDTH - 150, GAME_HEIGHT - 40, 'Score: 0', {fill: '#fff'});
+  hpText = game.add.bitmapText(GAME_WIDTH - 170, 20, 'carrier_command', 'Life: ' + STARTING_LIFE, 15);
+  hpText.tint = '0xffffff';
+
+  scoreText = game.add.bitmapText(GAME_WIDTH - 170, 40, 'carrier_command', 'Hits: 0', 15);
+  scoreText.tint = '0xffffff';
 }

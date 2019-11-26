@@ -34,7 +34,7 @@ function displayHighScores(){
 
 function addScore(amount){
   player.score += amount;
-  scoreText.text = 'Score: ' + player.score.toString();
+  scoreText.text = 'Hits: ' + player.score.toString();
 }
 
 function addNewHighScore(initials, allScores){
@@ -101,11 +101,12 @@ function gameOver(){
 
 // Level functions
 function showLevelText(){
-  levelText = game.add.text(
-    game.world.centerX - 120,
+  levelText = game.add.bitmapText(
+    game.world.centerX - 80,
     game.world.centerY,
+    'carrier_command',
     "LEVEL " + level.toString() + "!",
-    { font: "60px Arial", fill: "#ff0044", align: "center" });
+    16);
 }
 
 function removeLevelText(){
